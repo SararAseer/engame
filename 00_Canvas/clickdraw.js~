@@ -1,0 +1,16 @@
+var c=document.getElementById('slate');
+var ctx=c.getContext('2d');
+c.addEventListener("click", function (evt) {
+    var mousePos = getMousePos(c, evt);
+    //  ctx.fillRect(mousePos.x,mousePos.y,mousePos.x+10, mousePos.y+10);
+    ctx.beginPath();
+    ctx.ellipse(mousePos.x, mousePos.y, 50, 50, Math.PI / 4, 0, 2 * Math.PI);
+    ctx.stroke();
+});
+function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: evt.clientX - rect.left,
+        y: evt.clientY - rect.top
+    }
+}
