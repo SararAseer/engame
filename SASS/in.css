@@ -1,0 +1,47 @@
+body {
+  color: blue;
+}
+
+.box {
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+}
+body h1 {
+  background-color: #BEBEBE;
+  color: #333;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+a {
+  color: #BEBEBE;
+  text-decoration: none;
+}
+
+h2 {
+  margin-left: 700px;
+  font-size: 22px;
+  margin-top: -110px;
+}
+
+p {
+  margin-left: 200px;
+  margin-top: -10px;
+}
+
+footer {
+  background-color: #575757;
+  text-align: right;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=in.css.map */
