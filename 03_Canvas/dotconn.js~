@@ -10,42 +10,33 @@ var go = document.getElementById("circle");
 var stop = document.getElementById("stop");
 var rad=0;
 var gro=true;
-var stops=true;
-var requestID;
+
 // clear the canvas, there is no more "last dot"
 go.addEventListener('click', function(e){
-  
-    begin();
+    gro=true;
+    if(rad==10){
+	gro=false;
+    }
 })
 
 stop.addEventListener('click', function(e){
-   
-    window.cancelAnimationFrame(requestID);
-   
+    gro=false;
+    if(rad==0){
+	gro=true;
+    }
 })
-function begin() {
+
+
+
+while(true){
+    ctx.clearRect(0, 0, c.width, c.height);
+    ctx.ellipse(ctx.width/2,ctx.height/2, rad, rad, Math.PI / 4, 0, 2 * Math.PI);
     if(gro){
 	rad++;
     }
     else if(!gro){
 	rad--;
     }
-    if(rad<=0){
-	gro=true;
-    }
-    else if(rad>=(c.width-2)/2){
-	gro=false;
-    }
-    ctx.beginPath();
-    ctx.fillStyle = "rgba(255, 255, 255,.9)";
-    ctx.border="none";
-    ctx.ellipse(c.width/2,c.height/2, rad, rad, Math.PI / 4, 0, 2 * Math.PI);
-    ctx.lineWidth = 1;
-    ctx.stroke();
-    ctx.fill();
-    requestID=requestAnimationFrame(begin);
 }
-
-
 
 

@@ -6,10 +6,10 @@ c.addEventListener("click", function (evt) {
     //  ctx.fillRect(mousePos.x,mousePos.y,mousePos.x+10, mousePos.y+10);
     ctx.beginPath();
     if(document.getElementById("1").checked==true){
-	ctx.fillRect(mousePos.x,mousePos.y,mousePos.x+10, mousePos.y+10);
+	ctx.fillRect(mousePos.x,mousePos.y,10,10);
     }
     else if(document.getElementById("1").checked==false){
-	ctx.ellipse(mousePos.x, mousePos.y, 50, 50, Math.PI / 4, 0, 2 * Math.PI);
+	ctx.ellipse(mousePos.x, mousePos.y, 1, 1, Math.PI / 4, 0, 2 * Math.PI);
     }
     ctx.stroke();
 });
