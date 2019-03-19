@@ -1,8 +1,8 @@
 var pic = document.getElementById('vimage');
 var clear_button = document.getElementById('but_clear');
 
-var oldx = -1;
-var oldy = -1;
+var ox = -1;
+var oy = -1;
 
 function addDot(event){
   var edge = pic.getBoundingClientRect();
@@ -18,23 +18,23 @@ function addDot(event){
 
   pic.appendChild(c);
 
-  if (oldx != -1){
+  if (ox != -1){
     var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line.setAttribute('x1', oldx);
+    line.setAttribute('x1', ox);
     line.setAttribute('x2', x);
-    line.setAttribute('y1', oldy);
+    line.setAttribute('y1', oy);
     line.setAttribute('y2', y);
     line.setAttribute('stroke', 'black');
     pic.appendChild(line);
   }
-  oldx = x;
-  oldy = y;
+  ox = x;
+  oy = y;
 }
 
 function clearPic(){
   while (pic.lastChild) {
     pic.removeChild(pic.lastChild);
   }
-  oldx = -1
-  oldy = -1
+  ox = -1
+  oy = -1
 }
