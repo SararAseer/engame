@@ -121,12 +121,12 @@ SyntaxError: invalid syntax
 	for i in range(len(res)):
 		if len(res[i])>0:
 			count+=1
-		if len(res[i])>2:
+		if len(res[i])>1:
 			count+=1.5
 		if len(res[i])==0:
 			count=0
 			break
-	if(len(pas)>6):
+	if(len(pas)>8):
 		count=10
 	return count
 
@@ -134,4 +134,7 @@ SyntaxError: invalid syntax
 4
 >>> print(ps("aB@dasdasd2"))
 10
->>> 
+>>>
+
+
+

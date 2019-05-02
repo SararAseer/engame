@@ -1,25 +1,21 @@
-<!DOCTYPE html>
-<!-- WORK FILE for CSS --> 
-
+<!doctype html>
 <html>
-  <link rel="stylesheet" type="text/css" href="in.css">
   <head>
-    <title>foo title</title>
-      <style>
-    .chart div{
-    font:10 px sans-serif;
-    background-color; steelblue;
-    text-align: right;
-    padding: 3px;
-    margin: 1px;
-    color: white;
-    }
-  </style>
+    
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+      p{
+      color: blue;
+      }
+      
+    </style>
   </head>
-
   <body>
-    <div class="chart"></div>
-    <script src="http://d3js.org/d3.v5.min.js"></script>
+    <p>Part2</p>
+    <p>Part1</p>
+    <p>Part2</p>
+    <script>
+      d3.select("p").style("color","red");
+    </script>
   </body>
-
 </html>
